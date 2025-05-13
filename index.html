@@ -190,7 +190,7 @@
 </head>
 
 <body>
-    <header>
+    <header class="appear-on-scroll">
         <h1><a href="index.html" style="color: white; text-decoration: none;">IIT Delhi AI Safety Initiative</a></h1>
         <p>We are a team of engineering students and researchers dedicated to making AI safe and reliable.</p>
         <button id="openInterestForm" style="margin-top:2rem;padding:0.8rem 2rem;font-size:1.2rem;background:#5dc1da;color:#fff;border:none;border-radius:5px;cursor:pointer;">Expression of Interest</button>
@@ -201,6 +201,7 @@
             <li><a href="tov.html">Theory of Victory</a></li>
             <li><a href="team.html">Team</a></li>
             <li><a href="research.html">Research</a></li>
+            <li><a href="resources.html">Resources</a></li>
             <li><a href="contact.html">Contact</a></li>
         </ul>
     </nav>
@@ -244,9 +245,9 @@
             threshold: 0.1
         });
 
-        // Observe all sections
-        document.querySelectorAll('section').forEach(section => {
-            observer.observe(section);
+        // Observe all appear-on-scroll elements
+        document.querySelectorAll('.appear-on-scroll').forEach(el => {
+            observer.observe(el);
         });
 
         // Minimal JS for smooth scrolling
