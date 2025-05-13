@@ -1,10 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>IIT Delhi AI Safety Initiative</title>
+    <title>Research - IIT Delhi AI Safety Initiative</title>
     <style>
         * {
             margin: 0;
@@ -23,36 +22,19 @@
         header {
             background-color: #003087;
             color: white;
-            min-height: 100vh;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
+            padding: 2rem;
             text-align: center;
-            position: relative;
-            overflow: hidden;
             margin-top: 4rem;
-            width: 100vw;
-            margin-left: calc(-50vw + 50%);
-            margin-right: calc(-50vw + 50%);
-            padding: 0 2rem;
         }
 
         header h1 {
-            font-size: 4rem;
-            margin-bottom: 1rem;
-            font-weight: 800;
-            line-height: 1.2;
-            max-width: 1200px;
-            margin-left: auto;
-            margin-right: auto;
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
         }
 
         header p {
-            font-size: 1.5rem;
+            font-size: 1.2rem;
             opacity: 0.9;
-            max-width: 800px;
-            margin: 0 auto;
         }
 
         /* Navigation */
@@ -131,24 +113,47 @@
             margin-bottom: 1rem;
         }
 
-        section p {
-            font-size: 1.1rem;
-            color: #555;
+        .research-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            padding: 1rem;
         }
 
-        .cta-button {
-            display: inline-block;
-            background-color: #5dc1da;
-            color: white;
-            padding: 0.8rem 1.5rem;
+        .research-card {
+            padding: 1.5rem;
+            transition: transform 0.3s ease;
+        }
+
+        .research-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .research-card h3 {
+            color: #003087;
+            margin-bottom: 1rem;
+            font-size: 1.3rem;
+        }
+
+        .research-card p {
+            color: #555;
+            margin-bottom: 1rem;
+        }
+
+        .research-card .authors {
+            font-style: italic;
+            color: #666;
+            margin-bottom: 1rem;
+        }
+
+        .research-card .link {
+            color: #5dc1da;
             text-decoration: none;
-            border-radius: 5px;
-            margin-top: 1rem;
             font-weight: bold;
         }
 
-        .cta-button:hover {
-            background-color: #5dc1da;
+        .research-card .link:hover {
+            text-decoration: underline;
         }
 
         /* Footer */
@@ -188,12 +193,10 @@
         }
     </style>
 </head>
-
 <body>
     <header>
         <h1><a href="index.html" style="color: white; text-decoration: none;">IIT Delhi AI Safety Initiative</a></h1>
-        <p>We are a team of engineering students and researchers dedicated to making AI safe and reliable.</p>
-        <button id="openInterestForm" style="margin-top:2rem;padding:0.8rem 2rem;font-size:1.2rem;background:#5dc1da;color:#fff;border:none;border-radius:5px;cursor:pointer;">Expression of Interest</button>
+        <p>Making AI Safe and Reliable</p>
     </header>
 
     <nav>
@@ -205,32 +208,57 @@
         </ul>
     </nav>
 
-    <!-- <div class="container">
-        <section id="programmes">
-            <h2>Our Programmes</h2>
-            <p>
-                <li>Weekly Reading Group</li>
-                <li>AI Safety Fundamentals Course (Coming Soon)</li>
-                <li>Weekly Research Hackathons (Coming Soon)</li>
-                <li>Guest Lectures and Seminars (Coming Soon)</li>
-            </p>
+    <div class="container">
+        <section>
+            <h2>Publications</h2>
+            <div class="research-grid">
+                <div class="research-card">
+                    <h3>Auto-Enhance: Towards a Meta-Benchmark to Evaluate AI Agents' Ability to Improve Other Agents</h3>
+                    <p>Towards a "meta-benchmark", in which a "top-level" agent aims to increase the performance of "reference agents" at tasks taken from a range of other benchmarks in the literature.</p>
+                    <p class="authors">Samuel F. Brown, <strong>Basil Labib</strong>, Codruta Lugoj, Sai Sasank Yenuganti</p>
+                    <a href="https://openreview.net/forum?id=8WM3sqWdQ4" class="link">View Paper →</a>
+                </div>
+            
+                <!-- <div class="research-card">
+                    <h3>Alignment Methods for Modern AI</h3>
+                    <p>Novel approaches to aligning AI systems with human values in the era of large language models.</p>
+                    <p class="authors">Team Members</p>
+                    <a href="#" class="link">View Paper →</a>
+                </div> -->
+            </div>
         </section>
-    </div> -->
 
-    <!-- <p><em>Last updated: 2025-05-13</em></p> -->
+        <section>
+            <h2>Research Projects</h2>
+            <div class="research-grid">
+              
+                <div class="research-card">
+                    <h3>GOVT. REGULATION OF AI DEVELOPMENT AND DEPLOYMENT</h3>
+                    <p>A report on the current state of AI regulation in India, and the potential for a regulatory framework to ensure the safe and reliable development and deployment of AI systems.</p>
+                    <p class="authors">Ravish Jha</p>
+                    <a href="mailto:ph1222216@iitd.ac.in" class="link">Request Access →</a>
+                </div>
+                <div class="research-card">
+                    <h3>Understanding Corrigibility</h3>
+                    <p>A distillation of Armstrong et. al. (2015) on the topic of corrigibility.</p>
+                    <p class="authors">Basil Labib</p>
+                    <a href="https://docs.google.com/document/d/1Ea7IQOgAsh3JLB9sFI2DxV4Y_h1pbmouDE4U02ZPVr8/edit?usp=sharing" class="link">View Paper →</a>
+                </div>
+                <!-- <div class="research-card">
+                    <h3>AI Safety in Critical Systems</h3>
+                    <p>Exploring safety protocols for AI systems deployed in critical infrastructure and healthcare.</p>
+                    <p class="authors">Team Members</p>
+                    <a href="#" class="link">Read More →</a>
+                </div> -->
+            </div>
+        </section>
+
+     
+    </div>
 
     <footer>
         <p>&copy; 2025 IIT Delhi AI Safety Initiative. All rights reserved.</p>
     </footer>
-
-    <!-- Expression of Interest Modal -->
-    <div id="interestModal" style="display:none;position:fixed;top:0;left:0;width:100vw;height:100vh;background:rgba(0,0,0,0.5);z-index:2000;justify-content:center;align-items:center;">
-      <div style="background:#fff;padding:2rem 2.5rem;border-radius:10px;max-width:400px;width:90%;position:relative;box-shadow:0 8px 32px rgba(0,0,0,0.2);">
-        <button id="closeInterestForm" style="position:absolute;top:1rem;right:1rem;background:none;border:none;font-size:1.5rem;cursor:pointer;color:#003087;">&times;</button>
-        <h2 style="color:#003087;margin-bottom:1rem;font-size:1.5rem;">Expression of Interest</h2>
-        <p>Please fill this form <a href="https://forms.gle/AAuU4KojNMDopFtS8">here</a>.</p>
-      </div>
-    </div>
 
     <script>
         // Intersection Observer for scroll animations
@@ -248,32 +276,6 @@
         document.querySelectorAll('section').forEach(section => {
             observer.observe(section);
         });
-
-        // Minimal JS for smooth scrolling
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                document.querySelector(this.getAttribute('href')).scrollIntoView({
-                    behavior: 'smooth'
-                });
-            });
-        });
-
-        // Expression of Interest Modal Logic
-        const openBtn = document.getElementById('openInterestForm');
-        const modal = document.getElementById('interestModal');
-        const closeBtn = document.getElementById('closeInterestForm');
-        const form = document.getElementById('interestForm');
-        openBtn.addEventListener('click', () => { modal.style.display = 'flex'; });
-        closeBtn.addEventListener('click', () => { modal.style.display = 'none'; });
-        modal.addEventListener('click', (e) => { if(e.target === modal) modal.style.display = 'none'; });
-        form.addEventListener('submit', function(e) {
-            e.preventDefault();
-            alert('Thank you for expressing your interest!');
-            modal.style.display = 'none';
-            form.reset();
-        });
     </script>
 </body>
-
 </html>

@@ -1,10 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>IIT Delhi AI Safety Initiative</title>
+    <title>Contact - IIT Delhi AI Safety Initiative</title>
     <style>
         * {
             margin: 0;
@@ -17,42 +16,28 @@
             line-height: 1.6;
             color: #333;
             background-color: #f9f9f9;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
         }
 
         /* Header */
         header {
             background-color: #003087;
             color: white;
-            min-height: 100vh;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
+            padding: 2rem;
             text-align: center;
-            position: relative;
-            overflow: hidden;
             margin-top: 4rem;
-            width: 100vw;
-            margin-left: calc(-50vw + 50%);
-            margin-right: calc(-50vw + 50%);
-            padding: 0 2rem;
         }
 
         header h1 {
-            font-size: 4rem;
-            margin-bottom: 1rem;
-            font-weight: 800;
-            line-height: 1.2;
-            max-width: 1200px;
-            margin-left: auto;
-            margin-right: auto;
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
         }
 
         header p {
-            font-size: 1.5rem;
+            font-size: 1.2rem;
             opacity: 0.9;
-            max-width: 800px;
-            margin: 0 auto;
         }
 
         /* Navigation */
@@ -111,6 +96,7 @@
             max-width: 1200px;
             margin: 0 auto;
             padding: 2rem;
+            flex: 1;
         }
 
         section {
@@ -131,24 +117,73 @@
             margin-bottom: 1rem;
         }
 
-        section p {
-            font-size: 1.1rem;
-            color: #555;
+        .contact-info {
+            padding: 2rem;
+            margin-bottom: 2rem;
         }
 
-        .cta-button {
-            display: inline-block;
-            background-color: #5dc1da;
-            color: white;
-            padding: 0.8rem 1.5rem;
+        .contact-info p {
+            font-size: 1.1rem;
+            color: #555;
+            margin-bottom: 1rem;
+        }
+
+        .contact-email {
+            color: #5dc1da;
+            font-weight: bold;
             text-decoration: none;
-            border-radius: 5px;
-            margin-top: 1rem;
+        }
+
+        .contact-email:hover {
+            text-decoration: underline;
+        }
+
+        .contact-form {
+            background: white;
+            border-radius: 10px;
+            padding: 2rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            color: #333;
             font-weight: bold;
         }
 
-        .cta-button:hover {
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 0.8rem;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 1rem;
+        }
+
+        .form-group textarea {
+            height: 150px;
+            resize: vertical;
+        }
+
+        .submit-button {
             background-color: #5dc1da;
+            color: white;
+            padding: 0.8rem 1.5rem;
+            border: none;
+            border-radius: 5px;
+            font-size: 1rem;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .submit-button:hover {
+            background-color: #4ab0c9;
         }
 
         /* Footer */
@@ -157,9 +192,8 @@
             color: white;
             text-align: center;
             padding: 1rem;
-            position: relative;
-            bottom: 0;
             width: 100%;
+            margin-top: auto;
         }
 
         /* Responsive Design */
@@ -188,12 +222,10 @@
         }
     </style>
 </head>
-
 <body>
     <header>
         <h1><a href="index.html" style="color: white; text-decoration: none;">IIT Delhi AI Safety Initiative</a></h1>
-        <p>We are a team of engineering students and researchers dedicated to making AI safe and reliable.</p>
-        <button id="openInterestForm" style="margin-top:2rem;padding:0.8rem 2rem;font-size:1.2rem;background:#5dc1da;color:#fff;border:none;border-radius:5px;cursor:pointer;">Expression of Interest</button>
+        <p>Making AI Safe and Reliable</p>
     </header>
 
     <nav>
@@ -205,32 +237,19 @@
         </ul>
     </nav>
 
-    <!-- <div class="container">
-        <section id="programmes">
-            <h2>Our Programmes</h2>
-            <p>
-                <li>Weekly Reading Group</li>
-                <li>AI Safety Fundamentals Course (Coming Soon)</li>
-                <li>Weekly Research Hackathons (Coming Soon)</li>
-                <li>Guest Lectures and Seminars (Coming Soon)</li>
-            </p>
+    <div class="container">
+        <section>
+            <h2>Contact Us</h2>
+            <div class="contact-info">
+                <p>We are a team of researchers and engineers dedicated to making AI safe and reliable. If you have any
+                    questions or would like to get in touch, please send us an email to <span class="contact-email">iitdelhi DOT aisi AT gmail DOT com</span>.</p>
+            </div>
         </section>
-    </div> -->
-
-    <!-- <p><em>Last updated: 2025-05-13</em></p> -->
+    </div>
 
     <footer>
         <p>&copy; 2025 IIT Delhi AI Safety Initiative. All rights reserved.</p>
     </footer>
-
-    <!-- Expression of Interest Modal -->
-    <div id="interestModal" style="display:none;position:fixed;top:0;left:0;width:100vw;height:100vh;background:rgba(0,0,0,0.5);z-index:2000;justify-content:center;align-items:center;">
-      <div style="background:#fff;padding:2rem 2.5rem;border-radius:10px;max-width:400px;width:90%;position:relative;box-shadow:0 8px 32px rgba(0,0,0,0.2);">
-        <button id="closeInterestForm" style="position:absolute;top:1rem;right:1rem;background:none;border:none;font-size:1.5rem;cursor:pointer;color:#003087;">&times;</button>
-        <h2 style="color:#003087;margin-bottom:1rem;font-size:1.5rem;">Expression of Interest</h2>
-        <p>Please fill this form <a href="https://forms.gle/AAuU4KojNMDopFtS8">here</a>.</p>
-      </div>
-    </div>
 
     <script>
         // Intersection Observer for scroll animations
@@ -249,31 +268,14 @@
             observer.observe(section);
         });
 
-        // Minimal JS for smooth scrolling
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                document.querySelector(this.getAttribute('href')).scrollIntoView({
-                    behavior: 'smooth'
-                });
-            });
-        });
-
-        // Expression of Interest Modal Logic
-        const openBtn = document.getElementById('openInterestForm');
-        const modal = document.getElementById('interestModal');
-        const closeBtn = document.getElementById('closeInterestForm');
-        const form = document.getElementById('interestForm');
-        openBtn.addEventListener('click', () => { modal.style.display = 'flex'; });
-        closeBtn.addEventListener('click', () => { modal.style.display = 'none'; });
-        modal.addEventListener('click', (e) => { if(e.target === modal) modal.style.display = 'none'; });
-        form.addEventListener('submit', function(e) {
+        // Form submission handling
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
             e.preventDefault();
-            alert('Thank you for expressing your interest!');
-            modal.style.display = 'none';
-            form.reset();
+            // Here you would typically handle the form submission
+            // For now, we'll just show an alert
+            alert('Thank you for your message. We will get back to you soon!');
+            this.reset();
         });
     </script>
 </body>
-
 </html>
