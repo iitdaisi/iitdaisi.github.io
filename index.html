@@ -3,7 +3,8 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cambridge AI Safety Hub</title>
+        <link rel="icon" type="image/x-icon" href="images/favicon/favicon.ico">
+        <title>AI Safety IIT Delhi</title>
     <style>
         * {
             margin: 0;
@@ -20,11 +21,25 @@
 
         /* Navigation */
         nav {
-            background-color: #fff;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-            position: sticky;
-            top: 0;
+            position: fixed;
+            top: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: calc(100% - 40px);
+            max-width: 1400px;
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+            border-radius: 20px;
+            border: 1px solid rgba(255, 255, 255, 0.3);
             z-index: 1000;
+            transition: all 0.3s ease;
+        }
+
+        nav:hover {
+            background: rgba(255, 255, 255, 0.9);
+            box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
         }
 
         .nav-container {
@@ -101,9 +116,12 @@
             position: absolute;
             top: 100%;
             left: 0;
-            background: white;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-            border-radius: 4px;
+            background: rgba(255, 255, 255, 0.9);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+            border-radius: 12px;
+            border: 1px solid rgba(255, 255, 255, 0.3);
             min-width: 200px;
             padding: 0.5rem 0;
             margin-top: 0.5rem;
@@ -141,6 +159,7 @@
             display: flex;
             align-items: center;
             overflow: hidden;
+            padding-top: 100px;
         }
 
         .hero-background {
@@ -252,6 +271,167 @@
         }
 
         .mission-content strong {
+            color: #000;
+            font-weight: 600;
+        }
+
+        .research-content {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .research-section {
+            margin-bottom: 4rem;
+        }
+
+        .research-section h3 {
+            font-size: 1.8rem;
+            font-weight: 600;
+            margin-bottom: 1.5rem;
+            color: #000;
+        }
+
+        .publication-item,
+        .project-item {
+            margin-bottom: 2.5rem;
+            padding-bottom: 2rem;
+            border-bottom: 1px solid #e0e0e0;
+        }
+
+        .publication-item:last-child,
+        .project-item:last-child {
+            border-bottom: none;
+        }
+
+        .publication-title,
+        .project-title {
+            font-size: 1.3rem;
+            font-weight: 600;
+            margin-bottom: 0.75rem;
+            color: #000;
+        }
+
+        .publication-description,
+        .project-description {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: #333;
+            margin-bottom: 0.75rem;
+        }
+
+        .publication-authors,
+        .project-author {
+            font-size: 1rem;
+            color: #666;
+            margin-bottom: 1rem;
+            font-style: italic;
+        }
+
+        .publication-link,
+        .project-link {
+            display: inline-block;
+            color: #04064f;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        .publication-link:hover,
+        .project-link:hover {
+            color: #011348;
+            text-decoration: underline;
+        }
+
+        /* Events Section */
+        .events-section {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+            margin: 4rem 0;
+        }
+
+        .events-content {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+
+        .events-title {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #000;
+            line-height: 1.2;
+        }
+
+        .events-text {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: #333;
+        }
+
+        .events-button {
+            display: inline-block;
+            padding: 1rem 2rem;
+            background: #04064f;
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: 600;
+            transition: background-color 0.3s, transform 0.3s;
+            align-self: flex-start;
+            margin-top: 0.5rem;
+        }
+
+        .events-button.disabled {
+            background: #666;
+            cursor: not-allowed;
+            transform: none;
+        }
+
+        .events-button:hover:not(.disabled) {
+            background: #011348;
+            transform: translateY(-2px);
+        }
+
+        .events-image {
+            width: 100%;
+            height: 400px;
+            object-fit: cover;
+            border-radius: 12px;
+            background: #f0f0f0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #999;
+            font-size: 1.1rem;
+        }
+
+        /* About Us Section */
+        .about-section {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .about-title {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 2rem;
+            color: #000;
+            text-align: center;
+        }
+
+        .about-content {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: #333;
+        }
+
+        .about-content p {
+            margin-bottom: 1.5rem;
+        }
+
+        .about-content strong {
             color: #000;
             font-weight: 600;
         }
@@ -518,6 +698,12 @@
 
         /* Responsive */
         @media (max-width: 768px) {
+            nav {
+                top: 10px;
+                width: calc(100% - 20px);
+                border-radius: 15px;
+            }
+
             .menu-toggle {
                 display: block;
             }
@@ -528,10 +714,14 @@
                 top: 100%;
                 left: 0;
                 right: 0;
-                background: white;
+                background: rgba(255, 255, 255, 0.95);
+                backdrop-filter: blur(20px);
+                -webkit-backdrop-filter: blur(20px);
                 flex-direction: column;
                 padding: 1rem;
-                box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+                margin-top: 10px;
+                border-radius: 15px;
+                box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
             }
 
             .nav-menu.active {
@@ -576,6 +766,23 @@
 
             .logo-img {
                 height: 30px;
+            }
+
+            .events-section {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .events-image {
+                height: 300px;
+            }
+
+            .events-title {
+                font-size: 2rem;
+            }
+
+            .about-title {
+                font-size: 2rem;
             }
         }
 
@@ -637,17 +844,17 @@
             <button class="menu-toggle" aria-label="Toggle menu">☰</button>
             <ul class="nav-menu">
                 <li class="nav-item">
-                    <a href="#" class="nav-link">Mission</a>
+                    <a href="#mission" class="nav-link">Mission</a>
                 </li>
                 <li class="nav-item">
-                    <a href="#" class="nav-link">Research</a>
+                    <a href="#research" class="nav-link">Research</a>
                 </li>
                 <li class="nav-item">
-                    <a href="#" class="nav-link">Events</a>
+                    <a href="#events" class="nav-link">Events</a>
                 </li>
-                <li class="nav-item">
-                    <a href="#" class="nav-link">About</a>
-                </li>
+                <!-- <li class="nav-item">
+                    <a href="#about" class="nav-link">About</a>
+                </li> -->
             </ul>
         </div>
     </nav>
@@ -657,19 +864,92 @@
             <div class="hero-background"></div>
             <div class="hero-content">
                 <div class="hero-left">
-                    <h1>AI Safety IIT Delhi</h1>
-                    <p class="hero-tagline">We are a team of engineers and researchers dedicated to mitigating the risks from advanced artificial intelligence.</p>
+                    <h1 class="fade-up">AI Safety IIT Delhi</h1>
+                    <p class="hero-tagline fade-up delay-1">We are a team of engineers and researchers dedicated to mitigating the risks from advanced artificial intelligence.</p>
                 </div>
                 <div class="hero-right">
+                    <p class="fade-up delay-2">We conduct educational six weeks AI safety fellowship to bring together bright students and researchers to work on AI safety research and development.</p>
+                    <p class="fade-up delay-3">For advanced researchers in AI safety, we can provide mentorship and compute resources to support you in advancing your research.</p>
+                </div>
+            </div>
+        </section>
 
-                    <p>We conduct educational six weeks AI safety fellowship to bring together bright students and researchers to work on AI safety research and development.</p>
-                    <p>For advanced researchers in AI safety, we can provide mentorship and compute resources to support you in advancing your research.</p>
+
+
+
+
+        <!-- Research Section -->
+        <section class="section" id="research">
+            <div class="container">
+                <h2 class="section-title fade-up">Research</h2>
+                <div class="research-content">
+                    <div class="research-section fade-up delay-1">
+                        <h3>Publications</h3>
+                        
+                        <div class="publication-item">
+                            <div class="publication-title">Auto-Enhance: Towards a Meta-Benchmark to Evaluate AI Agents' Ability to Improve Other Agents</div>
+                            <div class="publication-authors">Samuel F. Brown, <strong>Basil Labib</strong>, Codruta Lugoj, Sai Sasank Yenuganti</div>
+                            <div class="publication-description">
+                                Towards a "meta-benchmark", in which a "top-level" agent aims to increase the performance of "reference agents" at tasks taken from a range of other benchmarks in the literature.
+                            </div>
+                            <a href="https://openreview.net/forum?id=8WM3sqWdQ4" class="publication-link">View Paper →</a>
+                        </div>
+                    </div>
+
+                    <div class="research-section fade-up delay-2">
+                        <h3>Research Projects</h3>
+                        
+                        <div class="project-item">
+                            <div class="project-title">GOVT. REGULATION OF AI DEVELOPMENT AND DEPLOYMENT</div>
+                            <div class="project-author">Ravish Jha</div>
+                            <div class="project-description">
+                                A report on the current state of AI regulation in India, and the potential for a regulatory framework to ensure the safe and reliable development and deployment of AI systems.
+                            </div>
+                            <a href="mailto:ph1222216@iitd.ac.in" class="project-link">Request Access →</a>
+                        </div>
+
+                        <div class="project-item">
+                            <div class="project-title">Developing a Robust Fairness and Bias Benchmark</div>
+                            <div class="project-author">Gargi Rathi</div>
+                            <div class="project-description">
+                                AI utilized to make decisions in fields of critical importance such as healthcare, the justice system, and facial recognition technology continues to be employed despite previous research finding significant disparities in treatment across protected classes. In this paper, we propose a new method of evaluating agentic AI in its treatment of individuals.
+                            </div>
+                            <a href="https://docs.google.com/document/d/1oalRqPKeIIeA0lqrA1Rtk02_RAMANz5rNglRdqM52jA/edit?tab=t.0" class="project-link">View Paper →</a>
+                        </div>
+
+                        <div class="project-item">
+                            <div class="project-title">Understanding Corrigibility</div>
+                            <div class="project-author">Basil Labib</div>
+                            <div class="project-description">
+                                A distillation of Armstrong et. al. (2015) on the topic of corrigibility.
+                            </div>
+                            <a href="https://docs.google.com/document/d/1Ea7IQOgAsh3JLB9sFI2DxV4Y_h1pbmouDE4U02ZPVr8/edit?usp=sharing" class="project-link">View Paper →</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Events Section -->
+        <section class="section" id="events">
+            <div class="container">
+                <div class="events-section fade-up">
+                    <div class="events-content">
+                        <h2 class="events-title fade-up delay-1">[UPCOMING] <br/>   <br/>Technical AI Safety Fellowship</h2>
+                        <p class="events-text fade-up delay-2">
+                            Join us for a curated six-week AI safety fellowship at IIT Delhi to enable enthusiastic folks to get started with AI safety research and development.
+                        </p>
+                        <a href="#" class="events-button disabled fade-up delay-3">Coming soon</a>
+                    </div>
+                    <div class="events-image fade-up delay-2">
+                        <img src="images/running.jpg" alt="People running and crossing a fence in a field" style="width: 100%; height: 100%; object-fit: cover; border-radius: 12px;">
+                    </div>
                 </div>
             </div>
         </section>
 
         <!-- Mission Section -->
-        <section class="section">
+        <section class="section" id="mission">
             <div class="container">
                 <h2 class="section-title fade-up">Our Theory of Victory</h2>
                 <div class="mission-content">
@@ -729,22 +1009,51 @@
         </section>
 
    
+        <!-- About Us Section -->
+        <!-- <section id="about" class="section">
+            <div class="container">
+                <div class="about-section">
+                    <h2 class="about-title fade-up">About Us</h2>
+                    <div class="about-content">
+                        <p class="fade-up delay-1">
+                            <strong>AI Safety IIT Delhi</strong> is the first-of-its-kind student research group at the Indian Institute of Technology Delhi, dedicated to addressing the critical challenges of AI safety and alignment. We are a team of engineering students and researchers committed to making AI safe and reliable for humanity.
+                        </p>
+                        <p class="fade-up delay-2">
+                            Our mission is to foster a vibrant community of AI safety researchers, conduct cutting-edge research, and provide educational opportunities for students interested in this crucial field. We believe that with the rapid advancement of AI systems, it is imperative to develop robust safety protocols, alignment techniques, and governance frameworks.
+                        </p>
+                        <p class="fade-up delay-2">
+                            We conduct educational six-week AI safety fellowships to bring together bright students and researchers to work on AI safety research and development. For advanced researchers in AI safety, we provide mentorship and compute resources to support their research endeavors.
+                        </p>
+                        <p class="fade-up delay-3">
+                            As the first AI safety initiative across all 23 IITs in India, we are pioneering the path for AI safety research in the Indian subcontinent, modeled after successful student safety groups at leading universities worldwide.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section> -->
 
-
-
-
+        <!-- Contact Section -->
+        <section class="section" id="contact">
+            <div class="container">
+                <h2 class="section-title fade-up">Contact</h2>
+                <div class="contact-content">
+                    <p class="fade-up delay-1">
+                        If you have any questions, please contact us at iitdelhi [DOT] aisiitd [AT] gmail [DOT] com.
+                    </p>
+                </div>
+            </div>
     </main>
 
     <footer>
         <div class="footer-content">
-            <img src="images/logoaisiitd.svg" alt="AI Safety IIT Delhi Logo" class="footer-logo">
+            <img src="images/white_logo_aisiitd.svg" alt="AI Safety IIT Delhi Logo" class="footer-logo">
             <h1 class="footer-title">AI Safety IIT Delhi</h1>
-            <div class="footer-links">
-                <a href="#">About</a>
-                <a href="#">Privacy Policy</a>
-                <a href="#">Terms of Service</a>
-                <a href="#">Contact</a>
-            </div>
+            <!-- <div class="footer-links"> -->
+                <!-- <a href="#about">About</a> -->
+                <!-- <a href="#privacy-policy">Privacy Policy</a>
+                <a href="#terms-of-service">Terms of Service</a> -->
+                <!-- <a href="#contact">Contact</a> -->
+            <!-- </div> -->
             <div class="footer-text" style="margin-top: 1rem;">
                 © 2025, AI Safety IIT Delhi. All rights reserved.
             </div>
