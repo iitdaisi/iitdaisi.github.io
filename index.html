@@ -842,6 +842,191 @@
         .fade-up.delay-4 {
             transition-delay: 0.4s;
         }
+
+        /* Team Section */
+        .team-section {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 4rem 2rem;
+        }
+
+        .team-title {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 3rem;
+            color: #000;
+            text-align: center;
+        }
+
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 3rem;
+            margin-top: 2rem;
+        }
+
+        .team-card {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+
+        .team-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .team-image-wrapper {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            overflow: hidden;
+            margin-bottom: 1.5rem;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            transition: box-shadow 0.3s ease;
+        }
+
+        .team-card:hover .team-image-wrapper {
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+        }
+
+        .team-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .team-name {
+            font-size: 1.3rem;
+            font-weight: 600;
+            color: #000;
+            margin-bottom: 0.5rem;
+        }
+
+        .team-designation {
+            font-size: 1rem;
+            color: #666;
+            margin-bottom: 0.75rem;
+        }
+
+        .team-linkedin {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: #0077b5;
+            text-decoration: none;
+            font-size: 0.95rem;
+            transition: color 0.3s;
+        }
+
+        .team-linkedin:hover {
+            color: #005885;
+        }
+
+        .linkedin-icon {
+            width: 20px;
+            height: 20px;
+        }
+
+        @media (max-width: 992px) {
+            .team-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 2rem;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .team-grid {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .team-title {
+                font-size: 2rem;
+            }
+        }
+
+        /* Supported By Section */
+        .supported-section {
+            background: #f9f9f9;
+            padding: 4rem 2rem;
+            margin: 4rem 0;
+        }
+
+        .supported-content {
+            max-width: 1000px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .supported-title {
+            font-size: 2rem;
+            font-weight: 600;
+            margin-bottom: 3rem;
+            color: #000;
+        }
+
+        .supporters-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 3rem;
+            align-items: center;
+            justify-items: center;
+            margin-top: 2rem;
+        }
+
+        .supporter-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 2rem;
+            transition: transform 0.3s ease;
+        }
+
+        .supporter-item:hover {
+            transform: translateY(-5px);
+        }
+
+        .supporter-logo {
+            max-width: 200px;
+            max-height: 100px;
+            width: auto;
+            height: auto;
+            object-fit: contain;
+            filter: grayscale(100%);
+            opacity: 0.7;
+            transition: filter 0.3s, opacity 0.3s;
+        }
+
+        .supporter-item:hover .supporter-logo {
+            filter: grayscale(0%);
+            opacity: 1;
+        }
+
+        .supporter-name {
+            margin-top: 1rem;
+            font-size: 1.1rem;
+            font-weight: 500;
+            color: #333;
+        }
+
+        .supporter-link {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        @media (max-width: 768px) {
+            .supported-title {
+                font-size: 1.8rem;
+            }
+
+            .supporters-grid {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+        }
     </style>
     </head>
     <body>
@@ -864,6 +1049,9 @@
                 <li class="nav-item">
                     <a href="#events" class="nav-link">Events</a>
                 </li>
+                <li class="nav-item">
+                    <a href="#team" class="nav-link">Team</a>
+                </li>
                 <li class="nav-item-button">
                     <a href="https://forms.gle/d9PoiJbB7ZpQrfBX9" class="nav-link-button">Join Us</a>
                 </li>
@@ -884,7 +1072,7 @@
                 </div>
                 <div class="hero-right">
                     <p class="fade-up delay-2">We conduct educational six weeks AI safety fellowship to bring together bright students and researchers to work on AI safety research and development.</p>
-                    <p class="fade-up delay-3">For advanced researchers in AI safety, we can provide mentorship and compute resources to support you in advancing your research.</p>
+                    <p class="fade-up delay-3">For advanced researchers in AI safety, we provide mentorship and compute resources to support you in advancing your research.</p>
                 </div>
             </div>
         </section>
@@ -952,12 +1140,22 @@
                     <div class="events-content">
                         <h2 class="events-title fade-up delay-1">[UPCOMING] <br/>   <br/>Technical AI Safety Fellowship</h2>
                         <p class="events-text fade-up delay-2">
-                            Join us for a curated six-week AI safety fellowship at IIT Delhi to enable enthusiastic folks to get started with AI safety research and development.
+                            Join us for a curated <strong>six-week</strong> AI safety fellowship at IIT Delhi to enable enthusiastic folks to get started with AI safety research and development.
+                            <br />
+                            <br />
+                            <strong>Why join?</strong>
+                            <ul>
+                                <li>Read leading AI research papers from <strong>OpenAI</strong>, <strong>Anthropic</strong>, and <strong>Google DeepMind</strong>.</li>
+                                <li><strong>Get funded</strong> for your own research project in AI safety and alignment.</li>
+                                <li><strong>Access to exclusive network</strong> of mentors and researchers at leading frontier AI labs worldwide.</li>
+                                <li>Fast-track your career in AI safety and alignment.</li>
+                                <li>Free meals and snacks during the fellowship!</li>
+                            </ul>
                         </p>
                         <a href="#" class="events-button disabled fade-up delay-3">Coming soon</a>
                     </div>
                     <div class="events-image fade-up delay-2">
-                        <img src="images/running.jpg" alt="People running and crossing a fence in a field" style="width: 100%; height: 100%; object-fit: cover; border-radius: 12px;">
+                        <img src="images/semhall.png" alt="People running and crossing a fence in a field" style="width: 100%; height: 100%; object-fit: cover; border-radius: 12px;">
                     </div>
                 </div>
             </div>
@@ -1019,6 +1217,216 @@
                             href="https://oaisi.org/" target="_blank">[10]</a>, and Berkeley AI safety initiative <a
                             href="https://berkeleyaisafety.com/" target="_blank">[11]</a>.
                     </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Supported By Section -->
+        <section class="supported-section" id="supporters">
+            <div class="container">
+                <div class="supported-content">
+                    <h2 class="supported-title fade-up">Supported By</h2>
+                    <div class="supporters-grid">
+                        <!-- Supporter 1 -->
+                        <div class="supporter-item fade-up delay-1">
+                            <a href="#" class="supporter-link" target="_blank" rel="noopener noreferrer">
+                                <div style="width: 200px; height: 100px; border-radius: 8px; display: flex; align-items: center; justify-content: center; color: #999;">
+                                    <img src="images/iitdlogo.svg" alt="IIT Delhi" style="width: 100%; height: 100%; object-fit: contain;">
+                                </div>
+                                <p class="supporter-name">IIT Delhi</p>
+                            </a>
+                        </div>
+
+                        <!-- Supporter 2 -->
+                        <div class="supporter-item fade-up delay-2">
+                            <a href="#" class="supporter-link" target="_blank" rel="noopener noreferrer">
+                                <div style="width: 200px; height: 100px; border-radius: 8px; display: flex; align-items: center; justify-content: center; color: #999;">
+                                    <img src="images/kairos.jpg" alt="Kairos Project" style="width: 100%; height: 100%; object-fit: contain;">
+                                </div>
+                                <p class="supporter-name">Kairos Project</p>
+                            </a>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Team Section -->
+        <section class="section" id="team">
+            <div class="container">
+                <div class="team-section">
+                    <h2 class="team-title fade-up">Our Team</h2>
+                    <div class="team-grid">
+                        <!-- Team Member: Tarun Prof -->
+                        <div class="team-card fade-up delay-1">
+                            <div class="team-image-wrapper">
+                                <img src="images/people/tarun_prof.jpg" alt="Tarun" class="team-image">
+                            </div>
+                            <h3 class="team-name">Prof. Tarun Mangla</h3>
+                            <p class="team-designation">Faculty Advisor</p>
+                            <!-- <a href="#" class="team-linkedin" target="_blank" rel="noopener noreferrer">
+                                <svg class="linkedin-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+                                </svg>
+                                LinkedIn
+                            </a> -->
+                        </div>
+
+                         <!-- Team Member: Basil -->
+                         <div class="team-card fade-up delay-4">
+                            <div class="team-image-wrapper">
+                                <img src="images/people/basil.jpg" alt="Basil" class="team-image">
+                            </div>
+                            <h3 class="team-name">Basil Labib</h3>
+                            <p class="team-designation">Co-organizer</p>
+                            <!-- <a href="#" class="team-linkedin" target="_blank" rel="noopener noreferrer">
+                                <svg class="linkedin-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+                                </svg>
+                                LinkedIn
+                            </a> -->
+                        </div>
+
+
+                        <!-- Team Member: Krishna -->
+                        <div class="team-card fade-up delay-1">
+                            <div class="team-image-wrapper">
+                                <img src="images/people/krishna.jpg" alt="Krishna" class="team-image">
+                            </div>
+                            <h3 class="team-name">Krishna Goel</h3>
+                            <p class="team-designation">Co-organizer</p>
+                            <!-- <a href="#" class="team-linkedin" target="_blank" rel="noopener noreferrer">
+                                <svg class="linkedin-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+                                </svg>
+                                LinkedIn
+                            </a> -->
+                        </div>
+
+                        <!-- Team Member: Shikhar -->
+                        <div class="team-card fade-up delay-2">
+                            <div class="team-image-wrapper">
+                                <img src="images/people/shikhar.jpg" alt="Shikhar" class="team-image">
+                            </div>
+                            <h3 class="team-name">Shikhar Gupta</h3>
+                            <p class="team-designation">Researcher</p>
+                            <!-- <a href="#" class="team-linkedin" target="_blank" rel="noopener noreferrer">
+                                <svg class="linkedin-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+                                </svg>
+                                LinkedIn
+                            </a> -->
+                        </div>
+
+                        <!-- Team Member: Ravish -->
+                        <div class="team-card fade-up delay-2">
+                            <div class="team-image-wrapper">
+                                <img src="images/people/ravish.png" alt="Ravish" class="team-image">
+                            </div>
+                            <h3 class="team-name">Ravish Jha</h3>
+                            <p class="team-designation">Researcher</p>
+                            <!-- <a href="#" class="team-linkedin" target="_blank" rel="noopener noreferrer">
+                                <svg class="linkedin-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+                                </svg>
+                                LinkedIn
+                            </a> -->
+                        </div>
+
+                        <!-- Team Member: Sanidhya -->
+                        <div class="team-card fade-up delay-3">
+                            <div class="team-image-wrapper">
+                                <img src="images/people/sanidhya.jpg" alt="Sanidhya" class="team-image">
+                            </div>
+                            <h3 class="team-name">Sanidhya Ojha</h3>
+                            <p class="team-designation">Researcher</p>
+                            <!-- <a href="#" class="team-linkedin" target="_blank" rel="noopener noreferrer">
+                                <svg class="linkedin-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+                                </svg>
+                                LinkedIn
+                            </a> -->
+                        </div>
+
+                        <!-- Team Member: Manoj -->
+                        <div class="team-card fade-up delay-3">
+                            <div class="team-image-wrapper">
+                                <img src="images/people/manoj.jpg" alt="Manoj" class="team-image">
+                            </div>
+                            <h3 class="team-name">Manoj K Gorle</h3>
+                            <p class="team-designation">Researcher</p>
+                            <!-- <a href="#" class="team-linkedin" target="_blank" rel="noopener noreferrer">
+                                <svg class="linkedin-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+                                </svg>
+                                LinkedIn
+                            </a> -->
+                        </div>
+
+                       
+                        <!-- Team Member: Gargi -->
+                        <div class="team-card fade-up delay-4">
+                            <div class="team-image-wrapper">
+                                <img src="images/people/gargi.jpg" alt="Gargi" class="team-image">
+                            </div>
+                            <h3 class="team-name">Gargi Rathi</h3>
+                            <p class="team-designation">Researcher</p>
+                            <!-- <a href="#" class="team-linkedin" target="_blank" rel="noopener noreferrer">
+                                <svg class="linkedin-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+                                </svg>
+                                LinkedIn
+                            </a> -->
+                        </div>
+
+                        <!-- Team Member: Arnav -->
+                        <div class="team-card fade-up delay-4">
+                            <div class="team-image-wrapper">
+                                <img src="images/people/arnav.png" alt="Arnav" class="team-image">
+                            </div>
+                            <h3 class="team-name">Arnav Panjla</h3>
+                            <p class="team-designation">Researcher</p>
+                            <!-- <a href="#" class="team-linkedin" target="_blank" rel="noopener noreferrer">
+                                <svg class="linkedin-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+                                </svg>
+                                LinkedIn
+                            </a> -->
+                        </div>
+
+
+                            <!-- Team Member: Indranil -->
+                            <div class="team-card fade-up delay-4">
+                                <div class="team-image-wrapper">
+                                    <img src="images/people/indranil.jpg" alt="Indranil" class="team-image">
+                                </div>
+                                <h3 class="team-name">Indranil Bhadra</h3>
+                                <p class="team-designation">Researcher</p>
+                                <!-- <a href="#" class="team-linkedin" target="_blank" rel="noopener noreferrer">
+                                    <svg class="linkedin-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                                        <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+                                    </svg>
+                                    LinkedIn
+                                </a> -->
+                            </div>
+
+
+                              <!-- Team Member: Rishabh -->
+                        <div class="team-card fade-up delay-4">
+                            <div class="team-image-wrapper">
+                                <img src="images/people/rishabh.jpg" alt="Rishabh" class="team-image">
+                            </div>
+                            <h3 class="team-name">Rishabh</h3>
+                            <p class="team-designation">Researcher</p>
+                            <!-- <a href="#" class="team-linkedin" target="_blank" rel="noopener noreferrer">
+                                <svg class="linkedin-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+                                </svg>
+                                LinkedIn
+                            </a> -->
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
