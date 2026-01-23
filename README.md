@@ -4,3 +4,5 @@
 
 2. Add "News" section to announce paper acceptances
 
+3. Optimize pictures
+
