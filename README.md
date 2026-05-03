@@ -1,4 +1,4 @@
-# AI Safety IIT Delhi Website
+# AI Security IIT Delhi Website
 
 1. Add "Resources" section
 
